@@ -3,6 +3,7 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 plugins {
     kotlin("jvm")
     id("org.jetbrains.compose")
+    kotlin("plugin.serialization") version "1.9.20" // will crash if there is no version specified
 }
 
 group = "com.github.tfackler"
@@ -23,6 +24,8 @@ dependencies {
 
     // Used for scraping webpages
     implementation("it.skrape:skrapeit:1.2.2")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
 }
 
 compose.desktop {
