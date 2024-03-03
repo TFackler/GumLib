@@ -20,6 +20,9 @@ dependencies {
     // (in a separate module for demo project and in testMain).
     // With compose.desktop.common you will also lose @Preview functionality
     implementation(compose.desktop.currentOs)
+
+    // Used for scraping webpages
+    implementation("it.skrape:skrapeit:1.2.2")
 }
 
 compose.desktop {
